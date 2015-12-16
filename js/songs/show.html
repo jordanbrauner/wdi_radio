@@ -1,4 +1,10 @@
-<h2>Show Song</h2>
-
-<p> Title: {{SongShowViewModel.song.title}} </p>
-<p> Artist: {{SongShowViewModel.song.artist}} </p>
+<section id="show-view">
+  <div id="l-show-col">
+    <p><strong>Title: </strong>{{SongShowViewModel.song.title}}</p>
+    <p><strong>Artist: </strong>{{SongShowViewModel.song.artist}}</p>
+    <p><strong>Genre: </strong>{{SongShowViewModel.song.genre}}</p>
+  </div>
+  <div id="r-show-col">
+    <img src="{{SongShowViewModel.song.album_art}}" id="album-art" />
+  </div>
+</section>
