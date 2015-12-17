@@ -3,13 +3,13 @@
     <h3><a data-ui-sref='songShow(song)'>{{song.title}}</a></h3>
     <p><strong>Author: </strong>{{song.artist}}</p>
     <p><strong>Genre: </strong>{{song.genre}}</p>
+    <audio controls autoplay data-ng-src="{{song.goodAudioLink}}">
+    </audio>
+    <br>
+    <button data-ui-sref="songEdit(song)"> EDIT </button>
   </div>
   <div id="r-show-col">
       <img data-ng-src="{{song.album_art}}" id="album-art"/>
   </div>
-  <audio controls autoplay   data-ng-src="{{song.goodAudioLink}}">
-  </audio>
-
-  <button data-ng-click="delete()">Hello I am the real delet button</button>
-
+  <!-- <button data-ng-click="delete()">Delete</button> -->
 </div>

@@ -28,6 +28,11 @@
               $state.go("songShow", {id: scope.song.id}, {reload: true});
             });
           };
+          scope.delete = function(){
+            scope.song.$delete({id: scope.song.id}, function(response){
+              $state.go("songIndex", {}, {reload: true});
+            });
+          };
         }
       };
     }
