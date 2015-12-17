@@ -8,6 +8,14 @@
     <input type="text" placeholder="Genre" name="genre" data-ng-model="song.genre" style="border: 1px solid black"><br>
     <label>Photo Url</label>
     <input type="text" placeholder="Album Art" name="album_art" data-ng-model="song.album_art" style="border: 1px solid black"><br>
-    <button type="button" data-ng-click="create()" data-ui-sref="songIndex"> SUBMIT </button>
+
+    <div data-ng-if="song.id">
+      <button type="button" data-ng-click="update()"> UPDATE </button>
+      <button>Not Yet Delete</button>
+    </div>
+    <div data-ng-if="!song.id">
+      <button type="button" data-ng-click="create()"> SUBMIT </button>
+      <button data-ui-sref="songIndex">CANCEL</button>
+    </div>
   </form>
 </div>

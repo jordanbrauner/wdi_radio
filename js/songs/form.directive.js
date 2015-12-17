@@ -22,7 +22,12 @@
               $state.go("songShow", {id: scope.song.id}, {reload: true});
             });
           };
+          scope.update = function(){
+            scope.song.$update({ id: scope.song.id }, function(response){
+              $state.go("songShow", {id: scope.song.id}, {reload: true});
+            });
+          };
         }
       };
-    };
+    }
 })();
