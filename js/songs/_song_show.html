@@ -7,6 +7,8 @@
   <div id="r-show-col">
       <img data-ng-src="{{song.album_art}}" id="album-art"/>
   </div>
+  <audio controls autoplay   data-ng-src="{{song.goodAudioLink}}">
+  </audio>
 
   <button data-ng-click="delete()">Hello I am the real delet button</button>
 
