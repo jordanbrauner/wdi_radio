@@ -11,7 +11,6 @@
 
   function SongNewControllerFunction( SongFactory, $stateParams ){
     this.song = new SongFactory();
-    console.log()
     this.create = function(){
       this.song.$save();
     };
