@@ -1,12 +1,2 @@
-  <div>New Song</div>
-  <form>
-    <label>Title</label>
-    <input type="text" placeholder="Title" name="title" data-ng-model="SongNewViewModel.song.title" style="border: 1px solid black"><br>
-    <label>Artist</label>
-    <input type="text" placeholder="Artist" name="artist" data-ng-model="SongNewViewModel.song.artist" style="border: 1px solid black"><br>
-    <label>Genre</label>
-    <input type="text" placeholder="Genre" name="genre" data-ng-model="SongNewViewModel.song.genre" style="border: 1px solid black"><br>
-    <label>Photo Url</label>
-    <input type="text" placeholder="Album Art" name="album_art" data-ng-model="SongNewViewModel.song.album_art" style="border: 1px solid black"><br>
-    <button type="button" data-ng-click="SongNewViewModel.create()" data-ui-sref="songIndex"> SUBMIT </button>
-  </form>
+<div>New Song</div>
+<section data-song-form data-song="SongNewViewModel.song"></section>

@@ -1,0 +1,28 @@
+( function(){
+  angular
+    .module("songs")
+    .directive( "songForm", [
+        "SongFactory",
+        "$state",
+        SongFormDirectiveFunction
+      ]);
+
+  function SongFormDirectiveFunction(SongFactory, $state){
+      return{
+        // templateUrl: "./_song_form.html",
+        templateUrl: "js/songs/_song_form.html",
+        replace: true,
+        scope: {
+          song: "=",
+          formType: "@"
+        },
+        link: function(scope){
+          scope.create = function(){
+            scope.song.$save( function(response){
+              $state.go("songShow", {id: scope.song.id}, {reload: true});
+            });
+          };
+        }
+      };
+    };
+})();

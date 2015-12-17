@@ -5,15 +5,10 @@
     .module("songs")
     .controller("SongNewController", [
       "SongFactory",
-      "$stateParams",
       SongNewControllerFunction
     ]);
 
-  function SongNewControllerFunction( SongFactory, $stateParams ){
+  function SongNewControllerFunction( SongFactory ){
     this.song = new SongFactory();
-    this.create = function(){
-      this.song.$save();
-    };
-
   }
 })();
