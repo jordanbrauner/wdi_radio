@@ -14,8 +14,6 @@
     this.song = SongFactory.get({id: $stateParams.id}, function(selSong){
       selSong.goodAudioLink = $sce.trustAsResourceUrl(selSong.audio_url);
     });
-    console.log(this.song);
-    console.log(this.song.goodAudioLink);
   }
 
 })();

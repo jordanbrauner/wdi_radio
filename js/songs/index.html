@@ -1,11 +1,14 @@
 <a data-ui-sref="songNew">New Song</a>
 
 <h2>All songs</h2>
-<div data-ng-repeat="artist in SongIndexViewModel.artistData | orderBy:'artist'">
-  <p>{{artist.artist}}</p>
+<div data-ng-repeat="artist in SongIndexViewModel.artistsData">
+  <h3>{{artist.artist}}</h3>
+  <div data-ng-repeat="song in artist.artistSongs">
+    <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
+  </div>
   <p> **** </p>
 </div>
 
-<div data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'artist'">
+<!-- <div data-ng-repeat="song in SongIndexViewModel.songs | orderBy:'artist'">
   <p><a data-ui-sref="songShow({id: song.id})">{{song.title}}</a></p>
-</div>
+</div> -->
