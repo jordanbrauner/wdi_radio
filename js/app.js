@@ -30,6 +30,12 @@
         controller: "SessionsController",
         controllerAs: "SessionsViewModel"
       })
+      .state("signup", {
+        url: "/signup",
+        templateUrl: "js/users/signup.html",
+        controller: "SessionsController",
+        controllerAs: "SessionsViewModel"
+      })
       .state("home", {
         url: "",
         templateUrl: "js/home.html",
