@@ -1,0 +1,14 @@
+<nav>
+  <p><a data-ui-sref="songIndex">Songs</a></p>
+  <p> | </p>
+  <div ng-show="currentUser">
+    Welcome, {{currentUser.email}}
+    <a data-ui-sref="signout">Sign Out</a>
+  </div>
+  <div ng-show="!currentUser">
+    <a data-ui-sref="signup">Sign Up</a>
+    <p> | </p>
+    <a data-ui-sref="signin">Sign In</a>
+  </div>
+  <button data-ui-sref="songNew" id="new-song-button">New Song</button>
+</nav>
