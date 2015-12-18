@@ -4,10 +4,11 @@
     .directive( "songForm", [
         "SongFactory",
         "$state",
+        "$sce",
         SongFormDirectiveFunction
       ]);
 
-  function SongFormDirectiveFunction(SongFactory, $state){
+  function SongFormDirectiveFunction(SongFactory, $state, $sce){
       return{
         // templateUrl: "./_song_form.html",
         templateUrl: "js/songs/_song_form.html",
